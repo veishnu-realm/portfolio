@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio Flipbook</title>
+
+  <!-- FIXED SCRIPT NAMES -->
+  <script src="jquery.min.js"></script>
+  <script src="turn.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    #viewer {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #toolbar {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 8px;
+      padding: 8px 12px;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    #toolbar button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #toolbar button:hover {
+      color: #00ffd5;
+    }
+
+    #book {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #book img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: black;
+    }
+
+    #page-number {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      color: white;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="viewer">
+
+  <div id="toolbar">
+    <button onclick="prevPage()">⏮</button>
+    <button onclick="nextPage()">⏭</button>
+    <button onclick="zoomIn()">➕</button>
+    <button onclick="zoomOut()">➖</button>
+    <button onclick="toggleFullscreen()">⛶</button>
+  </div>
+
+  <div id="book">
+    <!-- KEEPING YOUR IMAGE PATHS SAME -->
+    <img src="images/page1.png">
+    <img src="images/page2.png">
+    <img src="images/page3.png">
+  </div>
+
+  <div id="page-number">Page 1</div>
+
+</div>
+
+<script>
+  let zoom = 1;
+
+  $(document).ready(function () {
+
+    // SAFETY CHECK (prevents silent failure)
+    if (!$.fn.turn) {
+      console.error("Turn.js not loaded");
+      return;
+    }
+
+    $("#book").turn({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      autoCenter: true,
+      display: "single", // smoother for fullscreen
+      when: {
+        turning: function (e, page) {
+          document.getElementById("page-number").innerText = "Page " + page;
+        }
+      }
+    });
+
+  });
+
+  function nextPage() {
+    $("#book").turn("next");
+  }
+
+  function prevPage() {
+    $("#book").turn("previous");
+  }
+
+  function zoomIn() {
+    zoom += 0.1;
+    document.getElementById("book").style.transform = `scale(${zoom})`;
+  }
+
+  function zoomOut() {
+    zoom = Math.max(1, zoom - 0.1);
+    document.getElementById("book").style.transform = `scale(${zoom})`;
+  }
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  window.addEventListener("resize", () => {
+    $("#book").turn("size", window.innerWidth, window.innerHeight);
+  });
+
+  // KEYBOARD NAVIGATION
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") {
+      $("#book").turn("next");
+    }
+    if (e.key === "ArrowLeft") {
+      $("#book").turn("previous");
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects – Veishnu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="architecture.css">
+</head>
+
+<body>
+
+<nav class="nav">
+  <a href="../index.html">Home</a>
+  <a href="../index.html#REALM">REALM</a>
+</nav>
+
+<div class="projects">
+
+  <!-- PROJECT 1 -->
+  <div class="project-row">
+    <div class="project-info">
+      <img src="../images/logo.png">
+      <h2>NOT A HOTEL Setouchi</h2>
+      <p>SAGISHIMA, JAPAN</p>
+    </div>
+
+    <div class="project-image">
+      <img src="../images/project1.1.jpg" onclick="openProject(event, 0)">
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-row">
+    <div class="project-info">
+      <img src="../images/logo.png">
+      <h2>Gastronomy Open Ecosystem</h2>
+      <p>SAN SEBASTIAN, SPAIN</p>
+    </div>
+
+    <div class="project-image">
+      <img src="../images/project1.2.jpg" onclick="openProject(event, 1)">
+    </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-row">
+    <div class="project-info">
+      <img src="../images/logo.png">
+      <h2>East Side Coastal Resiliency</h2>
+      <p>NEW YORK, USA</p>
+    </div>
+
+    <div class="project-image">
+      <img src="../images/project1.3.jpg" onclick="openProject(event, 2)">
+    </div>
+  </div>
+
+  <!-- PROJECT 4 -->
+  <div class="project-row">
+    <div class="project-info">
+      <img src="../images/logo.png">
+      <h2>Housing Studio</h2>
+      <p>CHENNAI, INDIA</p>
+    </div>
+
+    <div class="project-image">
+      <img src="../images/project1.4.jpg" onclick="openProject(event, 3)">
+    </div>
+  </div>
+
+  <!-- PROJECT 5 -->
+  <div class="project-row">
+    <div class="project-info">
+      <img src="../images/logo.png">
+      <h2>Housing Studio</h2>
+      <p>CHENNAI, INDIA</p>
+    </div>
+
+    <div class="project-image">
+      <img src="../images/project1.5.jpg" onclick="openProject(event, 4)">
+    </div>
+  </div>
+
+</div>
+
+<!-- ================= OPEN VIEW ================= -->
+
+<div class="project-open" id="projectOpen">
+
+  <div class="close-btn" onclick="closeProject()">← Back</div>
+
+  <!-- 🔥 ONLY HORIZONTAL IMAGE STRIP -->
+  <div class="open-gallery" id="gallery"></div>
+
+</div>
+
+<script src="architecture.js" defer></script>
+
+</body>
+</html>
