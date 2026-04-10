@@ -1,7 +1,7 @@
 // ==========================
 // LOADER ANIMATION
 // ==========================
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
   const tl = gsap.timeline();
 
