@@ -83,34 +83,39 @@ const IDLE_DELAY = 1000;
 
 if (hero && svg && mainBlob) {
 
-  hero.addEventListener("mousemove", (e) => {
+  let lastTrailTime = 0;
 
-    stopIdleBlobs();
+hero.addEventListener("mousemove", (e) => {
 
-    const pt = svg.createSVGPoint();
-    pt.x = e.clientX;
-    pt.y = e.clientY;
+  stopIdleBlobs();
 
-    const matrix = svg.getScreenCTM();
-    if (!matrix) return;
+  const pt = svg.createSVGPoint();
+  pt.x = e.clientX;
+  pt.y = e.clientY;
 
-    const svgP = pt.matrixTransform(matrix.inverse());
+  const matrix = svg.getScreenCTM();
+  if (!matrix) return;
 
-    const now = performance.now();
-    const dx = svgP.x - lastX;
-    const dy = svgP.y - lastY;
-    const dt = Math.max(16, now - lastTime);
+  const svgP = pt.matrixTransform(matrix.inverse());
 
-    const speed = Math.sqrt(dx * dx + dy * dy) / dt;
+  const now = performance.now();
+  const dx = svgP.x - lastX;
+  const dy = svgP.y - lastY;
+  const dt = Math.max(16, now - lastTime);
 
-    targetRadius = Math.min(30, 10 + speed * 250);
-    stretchX = 1 + Math.abs(dx) * 0.008;
-    stretchY = 1 + Math.abs(dy) * 0.008;
+  const speed = Math.sqrt(dx * dx + dy * dy) / dt;
 
-    currentX = svgP.x;
-    currentY = svgP.y;
+  targetRadius = Math.min(30, 10 + speed * 250);
+  stretchX = 1 + Math.abs(dx) * 0.008;
+  stretchY = 1 + Math.abs(dy) * 0.008;
 
-    // TRAIL BLOBS
+  currentX = svgP.x;
+  currentY = svgP.y;
+
+  // 🚀 LIMIT TRAIL CREATION (THIS FIXES LAG)
+  if (now - lastTrailTime > 40) { // ~25 FPS instead of 200+
+    lastTrailTime = now;
+
     const trail = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     trail.setAttribute("cx", svgP.x);
     trail.setAttribute("cy", svgP.y);
@@ -126,13 +131,15 @@ if (hero && svg && mainBlob) {
       ease: "power2.out",
       onComplete: () => trail.remove()
     });
+  }
 
-    lastX = svgP.x;
-    lastY = svgP.y;
-    lastTime = now;
+  lastX = svgP.x;
+  lastY = svgP.y;
+  lastTime = now;
 
-    resetIdleTimer();
-  });
+  resetIdleTimer();
+});
+   
 
   function animateBlob() {
     currentRadius += (targetRadius - currentRadius) * 0.1;
