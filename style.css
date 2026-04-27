@@ -143,7 +143,6 @@ section.hero-lnd {
 }
 
 .signature {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -405,8 +404,8 @@ html {
 
 .layer {
   position: absolute;
-  width: 200%;
-  height: 200%;
+  width: 120%;
+  height: 120%;
   top: 0%;
   left: 0%;
 }

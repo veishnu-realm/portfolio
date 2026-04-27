@@ -106,7 +106,7 @@
 
         <!-- FIXED IMAGE -->
         <image
-          xlink:href="images/hero-hover.png"
+          href="images/hero-hover.png"
           width="400"
           height="500"
           mask="url(#liquidReveal)"
@@ -233,14 +233,17 @@
   </div>
 
   <!-- SCRIPT GOES HERE -->
-  <script>
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+ <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const isMobile = window.innerWidth < 900;
 
     if (isMobile) {
-      document.getElementById("mobileBlock").style.display = "flex";
+      const block = document.getElementById("mobileBlock");
+      if (block) block.style.display = "flex";
       document.body.style.overflow = "hidden";
     }
-  </script>
+  });
+</script>
 
 </body>
 </html>
