@@ -6,6 +6,7 @@ const projects = [
   {
     main: "../images/project1.jpg",
     images: [
+      "../images/MJ-giphy.gif",
       "../images/project1.jpg",
       "../images/project1.jpg",
       "../images/project1.jpg"
@@ -14,6 +15,7 @@ const projects = [
   {
     main: "../images/project1.jpg",
     images: [
+      "../images/project1.jpg",
       "../images/project1.jpg",
       "../images/project1.jpg"
     ]
