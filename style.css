@@ -179,6 +179,12 @@ section.hero-lnd {
   text-align: center;
 }
 
+.REALM-section h3 {
+  font-size: 12px;
+  margin-bottom: 30px;
+  opacity: 0.6;
+}
+
 .REALM-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -579,4 +585,19 @@ a, button {
   margin-top: -50px;
   font-size: 15px;
   text-align: center;
+}
+
+#contact {
+  position: relative;
+}
+
+.corner-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  width: 50px;   /* adjust size */
+  height: auto;
+
+  z-index: 10;
 }

@@ -6,32 +6,74 @@ const projects = [
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/MJ-giphy.gif",
-      "../images/project1.jpg",
-      "../images/project1.jpg",
-      "../images/project1.jpg"
+      "../images/fh/f1.0.jpg",
+      "../images/fh/f1.jpg",
+      "../images/fh/f2.jpg",
+      "../images/fh/f3.jpg",
+      "../images/fh/f4.jpg",
+      "../images/fh/f5.jpg",
+      "../images/fh/f6.jpg",
+      "../images/fh/f7.png",
+      "../images/fh/f8.png",
+      "../images/fh/f9.png",
+      "../images/fh/f10.png",
+      "../images/fh/f11.png",
+      "../images/fh/f12.png",
+      "../images/fh/f13.png",
+      "../images/fh/f14.png",
+      "../images/fh/f15.png",
+      "../images/fh/f16.gif",
     ]
   },
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/project1.jpg",
-      "../images/project1.jpg",
-      "../images/project1.jpg"
+      "../images/hc/h1.jpg",
+      "../images/hc/h2.jpg",
+      "../images/hc/h3.jpg",
+      "../images/hc/h4.jpg",
+      "../images/hc/h5.jpg",
+      "../images/hc/h6.jpg",
+      "../images/hc/h7.jpg",
+      "../images/hc/h8.jpg",
+      "../images/hc/h9.png",
+      "../images/hc/h10.png",
+      "../images/hc/h11.jpg",
+      "../images/hc/h12.jpg",
+      "../images/hc/h13.jpg",
+      "../images/hc/h14.jpg",
     ]
   },
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/project1.jpg",
-      "../images/project1.jpg"
+      "../images/te/te1.jpg",
+      "../images/te/te2.jpg",
+      "../images/te/te3.jpg",
+      "../images/te/te4.jpg",
+      "../images/te/te5.jpg",
+      "../images/te/te6.jpg",
+      "../images/te/te7.jpg",
+      "../images/te/te8.jpg",
+      "../images/te/te9.jpg",
+      "../images/te/te10.jpg",
+      "../images/te/te11.jpg",
+      "../images/te/te12.jpg",
     ]
   },
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/project1.jpg",
-      "../images/project1.jpg"
+      "../images/fl/fl1.jpg",
+      "../images/fl/fl2.jpg",
+      "../images/fl/fl3.jpg",
+      "../images/fl/fl4.jpg",
+      "../images/fl/fl5.jpg",
+      "../images/fl/fl6.jpg",
+      "../images/fl/fl7.jpg",
+      "../images/fl/fl8.jpg",
+      "../images/fl/fl9.jpg",
+      "../images/fl/fl10.jpg",
     ]
   },
   {
