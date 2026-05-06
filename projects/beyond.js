@@ -6,56 +6,57 @@ const projects = [
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/fh/f1.0.jpg",
-      "../images/fh/f1.jpg",
-      "../images/fh/f2.jpg",
-      "../images/fh/f3.jpg",
-      "../images/fh/f4.jpg",
-      "../images/fh/f5.jpg",
-      "../images/fh/f6.jpg",
-      "../images/fh/f7.png",
-      "../images/fh/f8.png",
-      "../images/fh/f9.png",
-      "../images/fh/f10.png",
-      "../images/fh/f11.png",
-      "../images/fh/f12.png",
-      "../images/fh/f13.png",
-      "../images/fh/f14.png",
-      "../images/fh/f15.png",
-      "../images/fh/f16.gif",
+      "../images/photo/ph1.jpg",
+      "../images/photo/ph2.jpg",
+      "../images/photo/ph3.jpg",
+      "../images/photo/ph4.jpg",
+      "../images/photo/ph5.jpg",
+      "../images/photo/ph6.jpg",
+      "../images/photo/ph7.jpg",
     ]
   },
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/hc/h1.jpg",
-      "../images/hc/h2.jpg",
-      "../images/hc/h3.jpg",
-      "../images/hc/h4.jpg",
-      "../images/hc/h5.jpg",
-      "../images/hc/h6.jpg",
-      "../images/hc/h7.jpg",
-      "../images/hc/h8.jpg",
-      "../images/hc/h9.png",
-      "../images/hc/h10.png",
-      "../images/hc/h11.jpg",
-      "../images/hc/h12.jpg",
-      "../images/hc/h13.jpg",
-      "../images/hc/h14.jpg",
+      "../images/art/ar1.jpg",
+      "../images/art/ar2.jpg",
+      "../images/art/ar3.jpg",
+      "../images/art/ar4.jpg",
+      "../images/art/ar5.jpg",
+      "../images/art/ar6.jpg",
+      "../images/art/ar7.jpg",
+      "../images/art/ar8.jpg",
     ]
   },
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/project1.jpg",
-      "../images/project1.jpg"
+      "../images/dig/di1.jpg",
+      "../images/dig/di2.jpg",
+      "../images/dig/di3.jpg",
+      "../images/dig/di4.jpg",
+      "../images/dig/di5.jpg",
+      "../images/dig/di6.jpg",
     ]
   },
   {
     main: "../images/project1.jpg",
     images: [
-      "../images/project1.jpg",
-      "../images/project1.jpg"
+      "../images/wal/w1.jpg",
+      "../images/wal/w2.jpg",
+      "../images/wal/w3.jpg",
+      "../images/wal/w4.jpg",
+      "../images/wal/w5.jpg",
+      "../images/wal/w6.jpg",
+      "../images/wal/w7.jpg",
+      "../images/wal/w8.jpg",
+      "../images/wal/w9.jpg",
+    ]
+  },
+  {
+    main: "../images/project1.jpg",
+    images: [
+      "../images/ms/ms1.jpg",
     ]
   },
   {
