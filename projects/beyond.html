@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6C44DLHSHW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6C44DLHSHW');
+</script>
 <meta charset="UTF-8">
 <title>Projects – Veishnu</title>
 
@@ -28,7 +37,7 @@
     </div>
 
     <div class="project-image">
-      <img src="../images/photo/phc.jpg" onclick="openProject(event, 0)">
+      <img src="../images/photo/phc.jpg" onclick="trackProject('Photography'); openProject(event, 0)">
     </div>
   </div>
 
@@ -41,7 +50,7 @@
     </div>
 
     <div class="project-image">
-      <img src="../images/art/arc.jpg" onclick="openProject(event, 1)">
+      <img src="../images/art/arc.jpg" onclick="trackProject('Art'); openProject(event, 1)">
     </div>
   </div>
 
@@ -54,7 +63,7 @@
     </div>
 
     <div class="project-image">
-      <img src="../images/dig/dic.jpg" onclick="openProject(event, 2)">
+      <img src="../images/dig/dic.jpg" onclick="trackProject('Digital'); openProject(event, 2)">
     </div>
   </div>
 
@@ -67,7 +76,7 @@
     </div>
 
     <div class="project-image">
-      <img src="../images/wal/wc.jpg" onclick="openProject(event, 3)">
+      <img src="../images/wal/wc.jpg" onclick="trackProject('Wall Painting'); openProject(event, 3)">
     </div>
   </div>
 
@@ -80,7 +89,7 @@
     </div>
 
     <div class="project-image">
-      <img src="../images/ms/msc.jpg" onclick="openProject(event, 4)">
+      <img src="../images/ms/msc.jpg" onclick="trackProject('Motor Sport'); openProject(event, 4)">
     </div>
   </div>
 
@@ -99,6 +108,15 @@
   <div class="open-gallery" id="gallery"></div>
 
 </div>
+
+<script>
+function trackProject(projectName) {
+  gtag('event', 'project_view', {
+    project_name: projectName,
+    section: 'Beyond'
+  });
+}
+</script>
 
 <script src="beyond.js" defer></script>
 
