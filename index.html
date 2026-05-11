@@ -229,7 +229,7 @@
   <!-- Your entire website content here -->
 
   <!-- MOBILE BLOCK -->
-  <div id="mobileBlock">
+ <div id="mobileBlock">
     <div class="mobile-message">
       <h1>Open on Desktop</h1>
       <p>This website is not optimized for mobile yet.<br>Please use a computer.</p>
@@ -237,17 +237,14 @@
   </div>
 
   <!-- SCRIPT GOES HERE -->
- <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const isMobile = window.innerWidth < 900;
+  <script>
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-      const block = document.getElementById("mobileBlock");
-      if (block) block.style.display = "flex";
+      document.getElementById("mobileBlock").style.display = "flex";
       document.body.style.overflow = "hidden";
     }
-  });
-</script>
+  </script>
 
 </body>
 </html>

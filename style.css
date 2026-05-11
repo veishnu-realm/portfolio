@@ -498,6 +498,14 @@ html {
   opacity: 0.7;
 }
 
+body.mobile-blocked {
+  overflow: hidden;
+}
+
+body.mobile-blocked > *:not(#mobileBlock) {
+  display: none !important;
+}
+
 /* ABOUT SECTION */
 .about-section {
   background: #000;
